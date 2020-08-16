@@ -1,0 +1,6 @@
+torch
+torchvision
+tensorboard
+sacred
+PyYAML
+fastai2
