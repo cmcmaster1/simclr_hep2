@@ -31,6 +31,7 @@ class SimCLR(nn.Module):
     def get_resnet(self, name):
         resnets = {
             "resnet18": xresnet18(),
+            "resnet34": xresnet34(),
             "resnet50": xresnet50(),
         }
         if name not in resnets.keys():
