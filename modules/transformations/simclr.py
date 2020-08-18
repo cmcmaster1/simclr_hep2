@@ -57,7 +57,6 @@ class TransformsSimCLRGrad:
                 torchvision.transforms.RandomApply([color_jitter], p=0.8),
                 torchvision.transforms.RandomGrayscale(p=0.2),
                 torchvision.transforms.ToTensor(),
-                kornia.filters.SpatialGradient()
             ]
         )
 
@@ -65,9 +64,10 @@ class TransformsSimCLRGrad:
             [
                 torchvision.transforms.Resize(size=size),
                 torchvision.transforms.ToTensor(),
-                kornia.filters.SpatialGradient()
             ]
         )
 
+        self.grad = kornia.filters.SpatialGradient()
+
     def __call__(self, x):
-        return self.train_transform(x), self.train_transform(x)
+        return self.grad(self.train_transform(x)), self.grad(self.train_transform(x))
