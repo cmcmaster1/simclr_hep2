@@ -6,6 +6,8 @@ def get_resnet(name, pretrained=False):
         "resnet18": xresnet18(pretrained=pretrained),
         "resnet34": xresnet34(pretrained=pretrained),
         "resnet50": xresnet50(pretrained=pretrained),
+        "resnet101": xresnet101(pretrained=pretrained),
+        "resnet152": xresnet152(pretrained=pretrained),
     }
     if name not in resnets.keys():
         raise KeyError(f"{name} is not a valid ResNet version")

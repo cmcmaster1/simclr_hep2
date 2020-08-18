@@ -82,6 +82,8 @@ class SimCLRGrad(nn.Module):
             "resnet18": xresnet18(),
             "resnet34": xresnet34(),
             "resnet50": xresnet50(),
+            "resnet101": xresnet101(),
+            "resnet152": xresnet152(),
         }
         if name not in resnets.keys():
             raise KeyError(f"{name} is not a valid ResNet version")
