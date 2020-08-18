@@ -60,7 +60,7 @@ class SimCLRGrad(nn.Module):
     """
 
     def __init__(self, args, encoder, n_features):
-        super(SimCLR, self).__init__()
+        super(SimCLRGrad, self).__init__()
 
         self.normalize = args.normalize
         self.encoder = encoder
