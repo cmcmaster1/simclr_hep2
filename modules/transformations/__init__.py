@@ -1,1 +1,1 @@
-from .simclr import TransformsSimCLR, TransformsSimCLRGrad
+from .simclr import TransformsSimCLR
