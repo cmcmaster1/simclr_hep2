@@ -65,7 +65,7 @@ class SimCLRGrad(nn.Module):
         self.normalize = args.normalize
         self.encoder = encoder
         self.n_features = n_features
-        self.grad = nn.Sequential(kornia.filters.SpatialGradient())
+        self.grad = nn.Sequential(kornia.filters.Sobel())
 
         # Replace the fc layer with an Identity function
         self.encoder[-1] = Identity()
